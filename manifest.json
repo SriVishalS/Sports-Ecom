@@ -1,0 +1,15 @@
+{
+      "short_name": "Sports Cart",
+      "name": "Sports Cart By Aakash",
+      "icons": [
+            {
+                  "src": "./images/chandralogo.png",
+                  "type": "image/png",
+                  "sizes": "192x192"
+            }
+      ],
+      "start_url": "index.html",
+      "display": "fullscreen",
+      "background_color": "#fff",
+      "theme_color": "#fff"
+}

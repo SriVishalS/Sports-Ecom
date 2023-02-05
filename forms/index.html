@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register for Full Stack Conference</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+</head>
+
+<body>
+  <header>
+    <div id="header-container" class="header-container">
+      <span>Order From</span>
+      <a href="../index.html">
+        <h2>Sports Cart Ecommerce</h2>
+      </a>
+    </div>
+  </header>
+  <div class="container">
+
+    <form action="index.html" method="post" novalidate>
+      <p id="form-hint" class="form-hint"><span class="asterisk">*</span> - required field</p>
+
+      <div class="basic-info-and-shirt-box">
+        <fieldset class="basic-info">
+          <legend>Basic Info</legend>
+
+          <label for="name">Name: <span class="asterisk">*</span>
+            <input type="text" id="name" name="user-name" class="error-border">
+            <span id="name-hint" class="name-hint hint">Name field cannot be blank</span>
+          </label>
+
+
+          <label for="email">Email Address: <span class="asterisk">*</span>
+            <input type="email" id="email" name="user-email" class="error-border">
+            <span id="email-hint" class="email-hint hint">Email address must be formatted correctly</span>
+          </label>
+
+
+          <label for="title">What Best Describes You!</label>
+          <select id="title" name="user-title">
+            <option hidden>Select</option>
+            <option value="Student">Student</option>
+            <option value="Bussiness Person">Bussiness Person</option>
+            <option value="Cricketer">Cricketer</option>
+            <option value="designer">Physical Training</option>
+            <option value="student">Organisation</option>
+            <option value="other">Others</option>
+          </select>
+
+          <input type="text" name="other-job-role" id="other-job-role" class="other-job-role"
+            placeholder="Other job role?">
+        </fieldset>
+
+        <fieldset class="shirts">
+          <legend>Purchase</legend>
+          <div class="shirt-div-box">
+            <div id="shirt-sizes" class="shirt-sizes">
+              <label for="size">We Sell :</label>
+              <select id="size" name="user-size">
+                <option value="Cricket">Cricket</option>
+                <option value="Hockey" selected>Hockey</option>
+
+              </select>
+            </div>
+
+            <div id="shirt-designs" class="shirt-designs">
+              <label for="design">Goods:</label>
+              <select id="design" name="user-design">
+                <option hidden>Select</option>
+                <option value="js puns">Bats</option>
+                <option value="heart js">Balls</option>
+              </select>
+            </div>
+
+            <div id="shirt-colors" class="shirt-colors">
+              <label for="color">Size:</label>
+              <select id="color">
+                <option selected hidden>Select a design theme above</option>
+                <option data-theme="js puns" value="cornflowerblue">English Willow</option>
+                <option data-theme="js puns" value="darkslategrey">Thick Edge Bats</option>
+                <option data-theme="js puns" value="gold">Curved Hockey Sticks</option>
+                <option data-theme="heart js" value="tomato">Tennis Balls</option>
+                <option data-theme="heart js" value="steelblue">Semi Cork Ball</option>
+                <option data-theme="heart js" value="dimgrey">Hockey Ball</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <fieldset id="activities" class="activities">
+        <legend>Support Us ! <span class="asterisk">*</span></legend>
+        <div id="activities-box" class="activities-box error-border">
+          <label>
+            <input type="checkbox" name="all" data-cost="200">
+            <span>Donate Directly To Our Franchise !</span>
+            <span class="activity-cost">Rs.200</span>
+          </label>
+          <label>
+            <input type="checkbox" name="js-libs" data-cost="100">
+            <span>Donate Form Clubs !</span>
+            <span class="activity-cost">Rs.100</span>
+          </label>
+          <label>
+            <input type="checkbox" name="node" data-cost="100">
+            <span>Donate For Sports Event !</span>
+            <span class="activity-cost">Rs.100</span>
+          </label>
+          <label>
+            <input type="checkbox" name="js-frameworks" data-cost="100">
+            <span>Donate On Our Infrastructure</span>
+            <span class="activity-cost">Rs.100</span>
+          </label>
+          <label>
+            <input type="checkbox" name="build-tools" ata-cost="100">
+            <span>Become A Premium Member</span>
+            <span class="activity-cost">Rs.100</span>
+          </label>
+          <label>
+            <input type="checkbox" name="npm" data-cost="100">
+            <span>Donate For Workshops</span>
+            <span class="activity-cost">Rs.100</span>
+          </label>
+          <label>
+            <input type="checkbox" name="express" data-cost="100">
+            <span>Donate For Homeless Children !</span>
+            <span class="activity-cost">Rs.100</span>
+          </label>
+        </div>
+        <p id="activities-cost" class="activities-cost">Total: Rs.0</p>
+        <p id="activities-hint" class="activities-hint hint">Choose at least one activity</p>
+      </fieldset>
+
+      <fieldset class="payment-methods">
+        <legend>Payment Info</legend>
+
+        <div class="payment-method-box">
+          <label for="payment">I'm going to pay with:</label>
+          <select id="payment" name="user-payment">
+            <option value="select method" hidden>Select Payment Method</option>
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="bitcoin">Bitcoin</option>
+          </select>
+        </div>
+
+        <div id="credit-card" class="credit-card">
+          <div class="expiration-box">
+            <div class="month-box">
+              <label for="exp-month">Expiration Date:</label>
+              <select id="exp-month" name="user-exp-month" class="error-border">
+                <option hidden>Select Date</option>
+                <option value="1">01 - January</option>
+                <option value="2">02 - February</option>
+                <option value="3">03 - March</option>
+                <option value="4">04 - April</option>
+                <option value="5">05 - May</option>
+                <option value="6">06 - June</option>
+                <option value="7">07 - July</option>
+                <option value="8">08 - August</option>
+                <option value="9">09 - September</option>
+                <option value="10">10 - October</option>
+                <option value="11">11 - November</option>
+                <option value="12">12 - December</option>
+              </select>
+            </div>
+
+            <div class="year-box">
+              <label for="exp-year">Expiration Year:</label>
+              <select id="exp-year" name="user-exp-year" class="error-border">
+                <option hidden>Select Year</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2020">2025</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="credit-card-box">
+            <div class="num-box">
+              <label for="cc-num">Card Number: <span class="asterisk">*</span>
+                <input id="cc-num" name="user-cc-num" type="text" class="error-border">
+                <span id="cc-hint" class="cc-hint hint">Credit card number must be between 13 - 16 digits</span>
+              </label>
+            </div>
+
+            <div class="zip-box">
+              <label for="zip">Zip Code: <span class="asterisk">*</span>
+                <input id="zip" name="user-zip" type="text" class="error-border">
+                <span id="zip-hint" class="zip-hint hint">Zip Code must be 5 digits</span>
+              </label>
+            </div>
+
+            <div class="cvv-box">
+              <label for="cvv">CVV: <span class="asterisk">*</span>
+                <input id="cvv" name="user-cvv" type="text" class="error-border">
+                <span id="cvv-hint" class="cvv-hint hint">CVV must be 3 digits</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div id="paypal" class="paypal">
+          <h3>PayPal</h3>
+          <p>If you selected the PayPal option we'll take you to Paypal's site to set up your billing information, when
+            you click “Register” below.</p>
+        </div>
+
+        <div id="bitcoin" class="bitcoin">
+          <h3>Bitcoin</h3>
+          <p>If you selected the Bitcoin option we'll take you to the Coinbase site to set up your billing information.
+            Due to the nature of exchanging Bitcoin, all Bitcoin transactions will be final.</p>
+        </div>
+      </fieldset>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
