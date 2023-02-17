@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <script src="js/script.js" defer></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init('YAtIA9QcTRbr2da2v');
+    })();
+  </script>
 </head>
 
 <body>
@@ -26,7 +33,6 @@
 
       <div class="basic-info-and-shirt-box">
         <fieldset class="basic-info">
-          <legend>Basic Info</legend>
 
           <label for="name">Name: <span class="asterisk">*</span>
             <input type="text" id="name" name="user-name" class="error-border">
@@ -58,34 +64,31 @@
         <fieldset class="shirts">
           <legend>Purchase</legend>
           <div class="shirt-div-box">
-            <div id="shirt-sizes" class="shirt-sizes">
-              <label for="size">We Sell :</label>
-              <select id="size" name="user-size">
-                <option value="Cricket">Cricket</option>
-                <option value="Hockey" selected>Hockey</option>
-
-              </select>
-            </div>
-
             <div id="shirt-designs" class="shirt-designs">
-              <label for="design">Goods:</label>
+              <label for="design">Select Sport:</label>
               <select id="design" name="user-design">
                 <option hidden>Select</option>
-                <option value="js puns">Bats</option>
-                <option value="heart js">Balls</option>
+                <option value="Cricket">Cricket</option>
+                <option value="Hockey">Hockey</option>
+                <option value="Badmiton">Badmiton</option>
+
               </select>
             </div>
 
             <div id="shirt-colors" class="shirt-colors">
-              <label for="color">Size:</label>
+              <label for="color">Select Sport Item</label>
               <select id="color">
                 <option selected hidden>Select a design theme above</option>
-                <option data-theme="js puns" value="cornflowerblue">English Willow</option>
-                <option data-theme="js puns" value="darkslategrey">Thick Edge Bats</option>
-                <option data-theme="js puns" value="gold">Curved Hockey Sticks</option>
-                <option data-theme="heart js" value="tomato">Tennis Balls</option>
-                <option data-theme="heart js" value="steelblue">Semi Cork Ball</option>
-                <option data-theme="heart js" value="dimgrey">Hockey Ball</option>
+                <option data-theme="Cricket" value="cricket bat">English Willow Bats</option>
+                <option data-theme="Cricket" value="cricket bat">Thick Edge Bats</option>
+                <option data-theme="Cricket" value="cricket bat">Edged Bats</option>
+                <option data-theme="Cricket" value="cricket bat">Curved Bats</option>
+                <option data-theme="Hockey" value="Hockey item">Turf Balls</option>
+                <option data-theme="Hockey" value="Hockey item">Ground Hockey Ball</option>
+                <option data-theme="Hockey" value="Hockey item">Hockey Sticks</option>
+                <option data-theme="Badmiton" value="Badmiton item">Shuttle Rackets</option>
+                <option data-theme="Badmiton" value="Badmiton item">Shuttle Corks</option>
+                <option data-theme="Badmiton" value="Badmiton item">Badmiton Shoes</option>
               </select>
             </div>
           </div>
@@ -219,7 +222,8 @@
         </div>
       </fieldset>
 
-      <button type="submit">Register</button>
+      <button type="submit" onclick="hi()">Register</button>
+
     </form>
   </div>
   <script src="js/script.js"></script>
