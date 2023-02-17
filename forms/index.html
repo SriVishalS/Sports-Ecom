@@ -4,15 +4,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register for Full Stack Conference</title>
+  <title>Sports Cart</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <link rel="icon" href="../images/chandralogo.png">
+
   <script src="js/script.js" defer></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
     (function () {
-      emailjs.init('YAtIA9QcTRbr2da2v');
+      emailjs.init('teqyBfc4IN7_CvZqK');
     })();
   </script>
 </head>
@@ -28,11 +30,12 @@
   </header>
   <div class="container">
 
-    <form action="index.html" method="post" novalidate>
+    <form action="index.html" novalidate>
       <p id="form-hint" class="form-hint"><span class="asterisk">*</span> - required field</p>
 
       <div class="basic-info-and-shirt-box">
         <fieldset class="basic-info">
+          <legend>Basic Info</legend>
 
           <label for="name">Name: <span class="asterisk">*</span>
             <input type="text" id="name" name="user-name" class="error-border">
@@ -222,7 +225,7 @@
         </div>
       </fieldset>
 
-      <button type="submit" onclick="hi()">Register</button>
+      <button type="button" onclick="placeOrder()">Register</button>
 
     </form>
   </div>

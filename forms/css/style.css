@@ -23,7 +23,7 @@ button {
 }
 
 body {
-  background: rgba(218, 174, 81, 0.1);
+  background: white;
 }
 
 header {
@@ -31,7 +31,8 @@ header {
 	color: rgb(255, 255, 255);
 	width: 100%;
 	padding: 10px 0;
-	background: linear-gradient(90deg, rgba(213, 51, 105, 1) 0%, rgba(218, 174, 81, 1) 100%);
+  background: linear-gradient(45deg, #1abc9c, #c2703d);
+
 }
 
 .header-container {
@@ -151,7 +152,6 @@ input[type="checkbox"]:disabled {
 }
 
 select {
-	-webkit-appearance: none;
 	-webkit-border-radius: 0px;
 	font-size: 1em;
   font-weight: 500;
@@ -197,7 +197,7 @@ button {
   width: calc(100% - 40px);
   margin: 25px auto;
   padding: 10px 25px;
-	background: rgb(213, 51, 105);
+	background: #1abc9c;
   border-radius: 4px;
   border: 1px solid transparent;
   border-right: 1px solid rgba(36, 28, 21, 0.2);

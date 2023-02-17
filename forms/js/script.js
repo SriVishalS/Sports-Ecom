@@ -1,4 +1,5 @@
 // ASSIGN GLOBAL VARIABLES
+
 // !-----------EMAIL CONFIG------------------
 
 const form = document.querySelector("form");
@@ -23,7 +24,6 @@ const activitiesCheckbox = document.querySelectorAll("#activities input");
 const activitiesTotalCost = document.getElementById("activities-cost");
 const activitiesLegend = document.getElementsByTagName("legend");
 
-
 // Payment Info Elements
 const paymentSelect = document.getElementById("payment");
 const creditCardInfo = document.getElementById("credit-card");
@@ -35,7 +35,17 @@ const infoPaypal = document.getElementById("paypal");
 /************************************************
  * SET DEFAULT OPTIONS AND SETTING ON PAGE LOAD *
  ************************************************/
-
+placeOrder = () => {
+  const usrObj2 = {
+    from_name: nameInput.value,
+    from_email: emailInput.value,
+    from_sport: selectDesign.value,
+    from_sportItem: selectColor.value,
+  };
+  emailjs.send("service_pchnc6i", "template_39mh5k5", usrObj2).then((res) => {
+    alert("Mail Reached, We Will Reach You Shortly");
+  });
+};
 window.addEventListener("load", () => {
   //Set focus on Name field
   nameInput.focus();
